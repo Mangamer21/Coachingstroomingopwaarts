@@ -112,6 +112,26 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		</section>
 
 		<!-- ═══════════════════════════════════════
+		     IN ACTION PHOTO BANNER
+		     ═══════════════════════════════════════ -->
+		<section class="action-banner">
+			<div class="action-inner">
+				<img
+					src="https://github.com/user-attachments/assets/c782b509-f740-418e-af3e-e7696bd38156"
+					alt="Gian Luca Bosmans geeft zwemles"
+					class="action-photo"
+					loading="lazy"
+				/>
+				<div class="action-overlay">
+					<div class="action-quote">
+						<p>"Elk kind dat het water overwint, is een overwinning voor mij."</p>
+						<span>— Gian Luca Bosmans</span>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ═══════════════════════════════════════
 		     SERVICES
 		     ═══════════════════════════════════════ -->
 		<section class="section section-alt" id="diensten">
@@ -148,7 +168,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 							<span>🏆</span>
 						</div>
 						<div class="service-body">
-							<h3>Techniektechnieketraining</h3>
+							<h3>Techniektraining</h3>
 							<p>Wil je sneller en efficiënter zwemmen? Ik verfijn je slagen, draaien en push-offs.</p>
 							<a href="/diensten#techniek" class="service-link">Meer info →</a>
 						</div>
@@ -180,9 +200,13 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 				<div class="about-grid">
 					<div class="about-visual">
 						<div class="about-img-wrap">
-							<div class="about-img-placeholder">
-								<span>GL</span>
-							</div>
+							<img
+								src="https://github.com/user-attachments/assets/4ba373bb-5657-40d9-b14f-46fdb44f188d"
+								alt="Gian Luca Bosmans – zwemleerkracht"
+								class="about-photo"
+								width="320"
+								height="380"
+							/>
 							<div class="about-badge-float">
 								<span>10+ jaar<br/>ervaring</span>
 							</div>
@@ -434,6 +458,48 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		width: 100%;
 	}
 
+	/* ── Action photo banner ─────────────────────── */
+	.action-banner {
+		position: relative;
+		overflow: hidden;
+		max-height: 480px;
+	}
+	.action-inner {
+		position: relative;
+	}
+	.action-photo {
+		width: 100%;
+		height: 480px;
+		object-fit: cover;
+		object-position: center 30%;
+		display: block;
+		border-radius: 0;
+	}
+	.action-overlay {
+		position: absolute;
+		inset: 0;
+		background: linear-gradient(to right, rgba(3,4,94,0.75) 0%, rgba(0,119,182,0.4) 60%, transparent 100%);
+		display: flex;
+		align-items: flex-end;
+		padding: 3rem;
+	}
+	.action-quote {
+		max-width: 480px;
+	}
+	.action-quote p {
+		font-family: "Playfair Display", serif;
+		font-size: clamp(1.2rem, 2.5vw, 1.7rem);
+		color: var(--white);
+		font-style: italic;
+		margin: 0 0 0.5rem;
+		line-height: 1.4;
+	}
+	.action-quote span {
+		font-size: 0.95rem;
+		color: var(--aqua);
+		font-weight: 700;
+	}
+
 	/* ── Trust strip ─────────────────────────────── */
 	.trust-strip {
 		background: var(--white);
@@ -526,6 +592,14 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		font-weight: 900;
 		color: rgba(255,255,255,0.4);
 		box-shadow: var(--shadow-lg);
+	}
+	.about-photo {
+		width: 320px;
+		height: 380px;
+		object-fit: cover;
+		border-radius: var(--radius-lg);
+		box-shadow: var(--shadow-lg);
+		display: block;
 	}
 	.about-badge-float {
 		position: absolute;

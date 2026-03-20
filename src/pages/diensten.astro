@@ -29,6 +29,36 @@ import Footer from '../components/Footer.astro';
 			</div>
 		</section>
 
+		<!-- Teaching photo strip -->
+		<div class="teaching-strip">
+			<img
+				src="https://github.com/user-attachments/assets/c782b509-f740-418e-af3e-e7696bd38156"
+				alt="Gian Luca Bosmans geeft zwemles"
+				class="strip-photo"
+				loading="lazy"
+			/>
+			<div class="strip-overlay">
+				<div class="strip-stats container">
+					<div class="strip-stat">
+						<strong>10+</strong>
+						<span>Jaar ervaring</span>
+					</div>
+					<div class="strip-stat">
+						<strong>500+</strong>
+						<span>Leerlingen</span>
+					</div>
+					<div class="strip-stat">
+						<strong>4</strong>
+						<span>Programma's</span>
+					</div>
+					<div class="strip-stat">
+						<strong>100%</strong>
+						<span>Op maat</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
 		<main>
 			<!-- Zwemles kinderen -->
 			<section class="service-detail section" id="zwemles-kinderen">
@@ -177,7 +207,7 @@ import Footer from '../components/Footer.astro';
 							</p>
 							<div class="detail-info">
 								<div class="info-item">
-									<strong>Groepgrootte</strong>
+									<strong>Groepsgrootte</strong>
 									<span>Max. 6 personen</span>
 								</div>
 								<div class="info-item">
@@ -255,6 +285,50 @@ import Footer from '../components/Footer.astro';
 </html>
 
 <style>
+	/* Teaching strip */
+	.teaching-strip {
+		position: relative;
+		height: 320px;
+		overflow: hidden;
+	}
+	.strip-photo {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center 40%;
+		border-radius: 0;
+		display: block;
+	}
+	.strip-overlay {
+		position: absolute;
+		inset: 0;
+		background: linear-gradient(to top, rgba(3,4,94,0.82) 0%, rgba(0,119,182,0.4) 60%, transparent 100%);
+		display: flex;
+		align-items: flex-end;
+		padding-bottom: 2.5rem;
+	}
+	.strip-stats {
+		display: flex;
+		gap: 3rem;
+		flex-wrap: wrap;
+	}
+	.strip-stat {
+		text-align: center;
+		color: var(--white);
+	}
+	.strip-stat strong {
+		display: block;
+		font-size: 2.2rem;
+		font-weight: 900;
+		line-height: 1;
+		color: var(--white);
+	}
+	.strip-stat span {
+		font-size: 0.85rem;
+		opacity: 0.8;
+		margin-top: 0.2rem;
+	}
+
 	/* Page header */
 	.page-header {
 		background: linear-gradient(160deg, var(--ocean-deep), var(--ocean));

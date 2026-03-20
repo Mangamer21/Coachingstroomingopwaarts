@@ -1,0 +1,334 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<!doctype html>
+<html lang="nl">
+	<head>
+		<BaseHead
+			title="Contact – Coaching Stroomingopwaarts"
+			description="Neem contact op met Gian Luca Bosmans voor een gratis kennismakingsgesprek of meer informatie over zwemles."
+		/>
+	</head>
+	<body>
+		<Header />
+
+		<!-- Page header -->
+		<section class="page-header">
+			<div class="container">
+				<span class="section-label">Schrijf je in</span>
+				<h1>Contact</h1>
+				<p>Het eerste gesprek is altijd gratis en vrijblijvend. Ik hoor graag van je!</p>
+			</div>
+			<div class="wave-bottom">
+				<svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M0,30 C480,60 960,0 1440,30 L1440,60 L0,60 Z" fill="white"/>
+				</svg>
+			</div>
+		</section>
+
+		<main>
+			<section class="section">
+				<div class="container">
+					<div class="contact-grid">
+
+						<!-- Contact form -->
+						<div class="form-col">
+							<h2>Stuur een bericht</h2>
+							<p class="form-intro">Vul het formulier in en ik neem zo snel mogelijk contact met je op, meestal binnen 24 uur.</p>
+
+							<form class="contact-form" name="contact" method="POST" action="/contact?success=true">
+								<input type="hidden" name="form-name" value="contact" />
+
+								<div class="form-row">
+									<div class="form-group">
+										<label for="voornaam">Voornaam *</label>
+										<input type="text" id="voornaam" name="voornaam" placeholder="Jouw voornaam" required />
+									</div>
+									<div class="form-group">
+										<label for="achternaam">Achternaam *</label>
+										<input type="text" id="achternaam" name="achternaam" placeholder="Jouw achternaam" required />
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label for="email">E-mailadres *</label>
+									<input type="email" id="email" name="email" placeholder="jouw@email.be" required />
+								</div>
+
+								<div class="form-group">
+									<label for="telefoon">Telefoonnummer</label>
+									<input type="tel" id="telefoon" name="telefoon" placeholder="+32 000 00 00 00" />
+								</div>
+
+								<div class="form-group">
+									<label for="dienst">Welke dienst interesseert je?</label>
+									<select id="dienst" name="dienst">
+										<option value="">— Maak een keuze —</option>
+										<option value="zwemles-kinderen">Zwemles voor kinderen</option>
+										<option value="zwemles-volwassenen">Zwemles voor volwassenen</option>
+										<option value="techniek">Techniektraining</option>
+										<option value="groepsles">Groepsles</option>
+										<option value="bijles">Zwembijles</option>
+										<option value="andere">Andere / nog niet zeker</option>
+									</select>
+								</div>
+
+								<div class="form-group">
+									<label for="bericht">Jouw bericht *</label>
+									<textarea id="bericht" name="bericht" placeholder="Vertel me meer over jezelf, jouw level, eventuele angst voor water, voorkeur van tijdstip..." required></textarea>
+								</div>
+
+								<button type="submit" class="btn btn-primary btn-submit">
+									<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+									Bericht versturen
+								</button>
+							</form>
+						</div>
+
+						<!-- Contact info -->
+						<aside class="info-col">
+							<!-- Profile card -->
+							<div class="profile-card card">
+								<img
+									src="https://github.com/user-attachments/assets/4ba373bb-5657-40d9-b14f-46fdb44f188d"
+									alt="Gian Luca Bosmans"
+									class="profile-photo"
+									width="120"
+									height="120"
+									loading="lazy"
+								/>
+								<div class="profile-info">
+									<strong>Gian Luca Bosmans</strong>
+									<span>Zwemleerkracht</span>
+								</div>
+								<p class="profile-quote">"Samen gaan we altijd vooruit – op jouw tempo."</p>
+							</div>
+
+							<!-- Contact details -->
+							<div class="contact-details card">
+								<h3>Contactgegevens</h3>
+								<ul class="contact-list">
+									<li>
+										<div class="ci-icon">
+											<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+										</div>
+										<div>
+											<span>E-mail</span>
+											<a href="mailto:info@coachingstroomingopwaarts.be">info@coachingstroomingopwaarts.be</a>
+										</div>
+									</li>
+									<li>
+										<div class="ci-icon">
+											<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.3h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8a16 16 0 0 0 5.95 5.95l.91-.91a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.9 16h.02z"/></svg>
+										</div>
+										<div>
+											<span>Telefoon</span>
+											<a href="tel:+32000000000">+32 000 00 00 00</a>
+										</div>
+									</li>
+									<li>
+										<div class="ci-icon">
+											<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+										</div>
+										<div>
+											<span>Beschikbaarheid</span>
+											<strong>Ma–Za, 8:00–19:00</strong>
+										</div>
+									</li>
+								</ul>
+							</div>
+
+							<!-- Response time badge -->
+							<div class="response-badge">
+								<span class="rb-dot"></span>
+								<span>Gemiddelde reactietijd: <strong>minder dan 24 uur</strong></span>
+							</div>
+						</aside>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<Footer />
+	</body>
+</html>
+
+<style>
+	/* Page header */
+	.page-header {
+		background: linear-gradient(160deg, var(--ocean-deep), var(--ocean));
+		color: var(--white);
+		padding: 4rem 0 0;
+		position: relative;
+		text-align: center;
+	}
+	.page-header .section-label { color: var(--aqua); }
+	.page-header h1 { color: var(--white); margin-bottom: 0.5rem; }
+	.page-header p { color: rgba(255,255,255,0.8); margin: 0 0 3rem; }
+	.wave-bottom { line-height: 0; overflow: hidden; }
+	.wave-bottom svg { display: block; width: 100%; }
+
+	/* Layout */
+	.contact-grid {
+		display: grid;
+		grid-template-columns: 1fr 380px;
+		gap: 3rem;
+		align-items: start;
+	}
+
+	/* Form column */
+	.form-col h2 { margin-bottom: 0.5rem; }
+	.form-intro { color: var(--text-mid); margin-bottom: 2rem; }
+
+	.form-row {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 1rem;
+	}
+
+	.btn-submit {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		margin-top: 0.5rem;
+		width: 100%;
+		justify-content: center;
+		padding: 0.85em 2em;
+	}
+
+	/* Info column */
+	.info-col {
+		display: flex;
+		flex-direction: column;
+		gap: 1.25rem;
+		position: sticky;
+		top: 88px;
+	}
+
+	/* Profile card */
+	.profile-card {
+		padding: 2rem;
+		text-align: center;
+		border-top: 4px solid var(--sky);
+	}
+	.profile-photo {
+		width: 100px;
+		height: 100px;
+		border-radius: 50%;
+		object-fit: cover;
+		object-position: top center;
+		border: 3px solid var(--foam);
+		margin: 0 auto 1rem;
+		display: block;
+		box-shadow: var(--shadow-sm);
+	}
+	.profile-info {
+		display: flex;
+		flex-direction: column;
+	}
+	.profile-info strong {
+		font-size: 1.1rem;
+		color: var(--ocean-deep);
+	}
+	.profile-info span {
+		font-size: 0.85rem;
+		color: var(--text-light);
+		margin-bottom: 0.75rem;
+	}
+	.profile-quote {
+		font-style: italic;
+		color: var(--text-mid);
+		font-size: 0.9rem;
+		margin: 0;
+		border-top: 1px solid var(--mist);
+		padding-top: 0.75rem;
+	}
+
+	/* Contact details */
+	.contact-details {
+		padding: 1.75rem;
+	}
+	.contact-details h3 {
+		font-size: 1.1rem;
+		margin-bottom: 1.25rem;
+	}
+	.contact-list {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
+	.contact-list li {
+		display: flex;
+		gap: 0.9rem;
+		align-items: flex-start;
+	}
+	.ci-icon {
+		width: 38px;
+		height: 38px;
+		background: var(--mist);
+		border-radius: var(--radius-sm);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-shrink: 0;
+	}
+	.ci-icon svg {
+		width: 18px;
+		height: 18px;
+		color: var(--ocean);
+	}
+	.contact-list span:first-child {
+		display: block;
+		font-size: 0.78rem;
+		font-weight: 800;
+		text-transform: uppercase;
+		letter-spacing: 0.08em;
+		color: var(--text-light);
+		margin-bottom: 0.15rem;
+	}
+	.contact-list a,
+	.contact-list strong {
+		font-size: 0.95rem;
+		font-weight: 700;
+		color: var(--ocean-deep);
+		word-break: break-all;
+	}
+	.contact-list a:hover { color: var(--ocean); }
+
+	/* Response badge */
+	.response-badge {
+		display: flex;
+		align-items: center;
+		gap: 0.6rem;
+		background: var(--off-white);
+		border: 1px solid var(--mist);
+		border-radius: var(--radius-sm);
+		padding: 0.75rem 1rem;
+		font-size: 0.88rem;
+		color: var(--text-mid);
+	}
+	.rb-dot {
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+		background: #22c55e;
+		flex-shrink: 0;
+		box-shadow: 0 0 0 3px rgba(34,197,94,0.2);
+	}
+
+	@media (max-width: 900px) {
+		.contact-grid {
+			grid-template-columns: 1fr;
+		}
+		.info-col { position: static; }
+	}
+	@media (max-width: 540px) {
+		.form-row { grid-template-columns: 1fr; }
+	}
+</style>
