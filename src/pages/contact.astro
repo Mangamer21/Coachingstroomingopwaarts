@@ -39,9 +39,16 @@ import Footer from '../components/Footer.astro';
 							<h2>Stuur een bericht</h2>
 							<p class="form-intro">Vul het formulier in en ik neem zo snel mogelijk contact met je op, meestal binnen 24 uur.</p>
 
-							<form class="contact-form" name="contact" method="POST" action="https://formsubmit.co/coachingstroomopwaarts@gmail.com">
+							<div id="form-success" class="form-success" aria-live="polite" hidden>
+								<div class="success-icon">
+									<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="36" height="36" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+								</div>
+								<h3>Bericht ontvangen!</h3>
+								<p>Bedankt voor je bericht. Ik neem zo snel mogelijk contact met je op, meestal binnen 24 uur.</p>
+							</div>
+
+							<form id="contact-form" class="contact-form" novalidate>
 								<input type="hidden" name="_subject" value="Nieuw contactbericht – Coaching Stroomopwaarts" />
-								<input type="hidden" name="_next" value="https://coachingstroomingopwaarts.be/contact?success=true" />
 								<input type="hidden" name="_captcha" value="false" />
 
 								<div class="form-row">
@@ -93,7 +100,7 @@ import Footer from '../components/Footer.astro';
 						<!-- Contact info -->
 						<aside class="info-col">
 							<!-- Profile card -->
-							<div class="profile-card card">
+							<div class="profile-card card fade-in">
 								<img
 									src="/photo-luca-standing.png"
 									alt="Gian Luca Bosmans"
@@ -110,7 +117,7 @@ import Footer from '../components/Footer.astro';
 							</div>
 
 							<!-- Contact details -->
-							<div class="contact-details card">
+							<div class="contact-details card fade-in delay-1">
 								<h3>Contactgegevens</h3>
 								<ul class="contact-list">
 									<li>
@@ -144,7 +151,7 @@ import Footer from '../components/Footer.astro';
 							</div>
 
 							<!-- Response time badge -->
-							<div class="response-badge">
+							<div class="response-badge fade-in delay-2">
 								<span class="rb-dot"></span>
 								<span>Gemiddelde reactietijd: <strong>minder dan 24 uur</strong></span>
 							</div>
@@ -154,6 +161,56 @@ import Footer from '../components/Footer.astro';
 			</section>
 		</main>
 
+
+<script>
+// AJAX form submission – avoids redirect to unresolved domain
+const form = document.getElementById('contact-form');
+const successBox = document.getElementById('form-success');
+
+form.addEventListener('submit', async (e) => {
+e.preventDefault();
+const btn = form.querySelector('button[type="submit"]');
+const originalHtml = btn.innerHTML;
+
+// Loading state
+btn.disabled = true;
+btn.innerHTML = '<svg class="spin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20" aria-hidden="true"><path d="M12 2a10 10 0 1 0 10 10" stroke-linecap="round"/></svg> Verzenden...';
+
+try {
+const data = new FormData(form);
+const res = await fetch('https://formsubmit.co/ajax/coachingstroomopwaarts@gmail.com', {
+method: 'POST',
+headers: { 'Accept': 'application/json' },
+body: data,
+});
+
+if (res.ok) {
+form.hidden = true;
+successBox.hidden = false;
+successBox.classList.add('animate-in');
+successBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+} else {
+throw new Error('Server error');
+}
+} catch {
+btn.disabled = false;
+btn.innerHTML = originalHtml;
+alert('Er ging iets mis. Probeer het opnieuw of mail mij rechtstreeks.');
+}
+});
+
+// Scroll-triggered fade-in animation
+const observer = new IntersectionObserver((entries) => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+entry.target.classList.add('visible');
+observer.unobserve(entry.target);
+}
+});
+}, { threshold: 0.12 });
+
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
 		<Footer />
 	</body>
 </html>
@@ -333,4 +390,117 @@ import Footer from '../components/Footer.astro';
 	@media (max-width: 540px) {
 		.form-row { grid-template-columns: 1fr; }
 	}
+
+/* ── Animations ─────────────────────────────────── */
+@keyframes fadeInUp {
+from { opacity: 0; transform: translateY(28px); }
+to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideInRight {
+from { opacity: 0; transform: translateX(28px); }
+to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes pulse-dot {
+0%, 100% { box-shadow: 0 0 0 3px rgba(34,197,94,0.20); }
+50%       { box-shadow: 0 0 0 7px rgba(34,197,94,0.08); }
+}
+@keyframes successPop {
+0%   { opacity: 0; transform: scale(0.85) translateY(16px); }
+60%  { transform: scale(1.04) translateY(-4px); }
+100% { opacity: 1; transform: scale(1) translateY(0); }
+}
+@keyframes spin {
+to { transform: rotate(360deg); }
+}
+@keyframes checkDraw {
+from { stroke-dashoffset: 60; }
+to   { stroke-dashoffset: 0; }
+}
+
+/* Scroll-triggered */
+.fade-in {
+opacity: 0;
+transform: translateY(24px);
+transition: opacity 0.55s ease, transform 0.55s ease;
+}
+.fade-in.visible {
+opacity: 1;
+transform: translateY(0);
+}
+.fade-in-right {
+opacity: 0;
+transform: translateX(24px);
+transition: opacity 0.55s ease, transform 0.55s ease;
+}
+.fade-in-right.visible {
+opacity: 1;
+transform: translateX(0);
+}
+
+/* Stagger helpers */
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.2s; }
+.delay-3 { transition-delay: 0.3s; }
+
+/* Spinning loader */
+.spin { animation: spin 0.8s linear infinite; }
+
+/* Page header entrance */
+.page-header .container { animation: fadeInUp 0.7s ease both; }
+
+/* Form col entrance */
+.form-col { animation: fadeInUp 0.65s 0.1s ease both; }
+
+/* Info col entrance */
+.info-col { animation: slideInRight 0.65s 0.2s ease both; }
+
+/* Form field focus ripple */
+input:focus, textarea:focus, select:focus {
+transform: translateY(-1px);
+transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+
+/* Submit button loading */
+button[disabled] {
+opacity: 0.75;
+cursor: not-allowed;
+}
+
+/* Pulsing badge dot */
+.rb-dot {
+animation: pulse-dot 2s ease-in-out infinite;
+}
+
+/* Success box */
+.form-success {
+background: linear-gradient(135deg, #f0fdf4, #dcfce7);
+border: 2px solid #86efac;
+border-radius: var(--radius-md);
+padding: 2.5rem 2rem;
+text-align: center;
+margin-bottom: 1.5rem;
+}
+.form-success.animate-in {
+animation: successPop 0.55s cubic-bezier(0.34,1.56,0.64,1) both;
+}
+.success-icon {
+width: 68px;
+height: 68px;
+background: #22c55e;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+margin: 0 auto 1rem;
+box-shadow: 0 4px 20px rgba(34,197,94,0.35);
+color: #fff;
+}
+.form-success h3 {
+color: #15803d;
+margin-bottom: 0.5rem;
+}
+.form-success p {
+color: #166534;
+margin: 0;
+}
 </style>
