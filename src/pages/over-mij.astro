@@ -149,7 +149,7 @@ import Footer from '../components/Footer.astro';
 							<div class="timeline-dot"></div>
 							<div class="timeline-content">
 								<span class="timeline-year">Certificaten</span>
-								<h4>Gediplomeerd zwemleerkracht</h4>
+								<h4>Gediplomeerd zwemleerkracht en Redder</h4>
 								<p>Erkende opleiding, gecertificeerd in EHBO en reanimatie, voortdurende bijscholing.</p>
 							</div>
 						</div>
@@ -260,11 +260,12 @@ import Footer from '../components/Footer.astro';
 	.teaching-photo {
 		width: 420px;
 		height: 520px;
-		object-fit: cover;
-		object-position: center top;
+		object-fit: contain;
+		object-position: center;
 		border-radius: var(--radius-lg);
 		box-shadow: var(--shadow-lg);
 		display: block;
+		background: var(--mist);
 	}
 	.values-list {
 		display: flex;
