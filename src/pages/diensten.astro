@@ -9,7 +9,7 @@ import Footer from '../components/Footer.astro';
 	<head>
 		<BaseHead
 			title="Diensten – Coaching Stroomingopwaarts"
-			description="Ontdek alle zwemdiensten van Gian Luca Bosmans: zwemles voor kinderen, volwassenen, bijles, techniektraining en groepslessen."
+			description="Ontdek alle zwemdiensten van Gian Luca Bosmans: zwemles voor kinderen, volwassenen, bijles en techniektraining."
 		/>
 	</head>
 	<body>
@@ -40,8 +40,12 @@ import Footer from '../components/Footer.astro';
 			<div class="strip-overlay">
 				<div class="strip-stats container">
 					<div class="strip-stat">
-						<strong>4</strong>
+						<strong>3</strong>
 						<span>Programma's</span>
+					</div>
+					<div class="strip-stat">
+						<strong>10</strong>
+						<span>Plekken beschikbaar</span>
 					</div>
 					<div class="strip-stat">
 						<strong>100%</strong>
@@ -180,49 +184,6 @@ import Footer from '../components/Footer.astro';
 				</div>
 			</section>
 
-			<hr class="section-divider" />
-
-			<!-- Groepsles -->
-			<section class="service-detail section" id="groepsles">
-				<div class="container">
-					<div class="detail-grid reverse">
-						<div class="detail-content">
-							<h2>Groepslessen</h2>
-							<p>
-								Samen zwemmen is leuker! In kleine groepen (max. 6 personen) leer je samen
-								met leeftijds- of niveaugenoten. Groepslessen zijn ook een geweldige manier
-								om sociale vaardigheden te ontwikkelen.
-							</p>
-							<p>
-								Ik organiseer regelmatig nieuwe groepen. Schrijf je in voor de wachtlijst.
-							</p>
-							<div class="detail-info">
-								<div class="info-item">
-									<strong>Beschikbare plekken</strong>
-									<span>10 plekken beschikbaar</span>
-								</div>
-								<div class="info-item">
-									<strong>Groepsgrootte</strong>
-									<span>Max. 6 personen</span>
-								</div>
-								<div class="info-item">
-									<strong>Leeftijd</strong>
-									<span>Kinderen & volwassenen (apart)</span>
-								</div>
-								<div class="info-item">
-									<strong>Duur</strong>
-									<span>45 min per les</span>
-								</div>
-							</div>
-							<a href="/contact" class="btn btn-primary">Wachtlijst</a>
-						</div>
-						<div class="detail-icon-col">
-							<div class="big-icon" style="background:linear-gradient(135deg,#00b4d8,#0096c7)">👥</div>
-						</div>
-					</div>
-				</div>
-			</section>
-
 			<!-- Pricing CTA -->
 			<section class="pricing-cta section section-alt">
 				<div class="container text-center">
@@ -242,20 +203,6 @@ import Footer from '../components/Footer.astro';
 								<li>✓ Kinderen & volwassenen</li>
 							</ul>
 							<a href="/contact" class="btn btn-primary">Contacteer mij</a>
-						</div>
-						<div class="pricing-card card featured">
-							<div class="pricing-badge">Populair</div>
-							<div class="pricing-top">
-								<h3>Groepsles</h3>
-								<div class="price">Op aanvraag</div>
-							</div>
-							<ul class="pricing-features">
-								<li>✓ Max. 6 personen</li>
-								<li>✓ Sociale omgeving</li>
-								<li>✓ Kostefficiënt</li>
-								<li>✓ Vaste lesdag per week</li>
-							</ul>
-							<a href="/contact" class="btn btn-primary">Inschrijven</a>
 						</div>
 						<div class="pricing-card card">
 							<div class="pricing-top">
@@ -400,7 +347,7 @@ import Footer from '../components/Footer.astro';
 	/* Pricing */
 	.pricing-cards {
 		display: grid;
-		grid-template-columns: repeat(3, 1fr);
+		grid-template-columns: repeat(2, 1fr);
 		gap: 1.5rem;
 		margin-top: 1.5rem;
 	}
