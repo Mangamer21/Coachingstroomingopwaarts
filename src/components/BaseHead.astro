@@ -7,11 +7,12 @@ interface Props {
 	title: string;
 	description: string;
 	image?: string;
+	skipAuthGuard?: boolean;
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
-const { title, description, image = '/blog-placeholder-1.jpg' } = Astro.props;
+const { title, description, image = '/blog-placeholder-1.jpg', skipAuthGuard = false } = Astro.props;
 ---
 
 <!-- Global Metadata -->
@@ -47,8 +48,10 @@ const { title, description, image = '/blog-placeholder-1.jpg' } = Astro.props;
 <meta property="twitter:image" content={new URL(image, Astro.url)} />
 
 <!-- Dev auth gate: redirect to /login if not authenticated -->
-<script>
-	if (window.location.pathname !== '/login' && sessionStorage.getItem('dev_auth') !== '1') {
-		window.location.replace('/login');
-	}
-</script>
+{!skipAuthGuard && (
+	<script>
+		if (window.location.pathname !== '/login' && sessionStorage.getItem('dev_auth') !== '1') {
+			window.location.replace('/login');
+		}
+	</script>
+)}
