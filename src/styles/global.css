@@ -1,21 +1,43 @@
-/*
-  The CSS in this style tag is based off of Bear Blog's default CSS.
-  https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
-  License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
- */
+/* =====================================================
+   Coaching Stroomingopwaarts – Global Styles
+   Water-inspired theme for Gian Luca Bosmans
+   ===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap');
 
 :root {
-	--accent: #2337ff;
-	--accent-dark: #000d8a;
-	--black: 15, 18, 25;
-	--gray: 96, 115, 159;
-	--gray-light: 229, 233, 240;
-	--gray-dark: 34, 41, 57;
-	--gray-gradient: rgba(var(--gray-light), 50%), #fff;
-	--box-shadow:
-		0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%),
-		0 16px 32px rgba(var(--gray), 33%);
+	/* Brand colours */
+	--ocean-deep:  #03045e;
+	--ocean:       #0077b6;
+	--ocean-mid:   #0096c7;
+	--sky:         #00b4d8;
+	--aqua:        #48cae4;
+	--foam:        #90e0ef;
+	--mist:        #caf0f8;
+	--white:       #ffffff;
+	--off-white:   #f0f8ff;
+
+	/* Text */
+	--text-dark:   #0d1b2a;
+	--text-mid:    #2d4a6a;
+	--text-light:  #6b8cae;
+
+	/* Accents */
+	--accent:      #00b4d8;
+	--accent-dark: #0077b6;
+	--gold:        #f9c74f;
+
+	/* Shadows */
+	--shadow-sm:   0 2px 8px rgba(0,119,182,0.15);
+	--shadow-md:   0 4px 24px rgba(0,119,182,0.20);
+	--shadow-lg:   0 8px 48px rgba(3,4,94,0.18);
+
+	/* Radius */
+	--radius-sm:   8px;
+	--radius-md:   16px;
+	--radius-lg:   32px;
 }
+
 @font-face {
 	font-family: "Atkinson";
 	src: url("/fonts/atkinson-regular.woff") format("woff");
@@ -30,112 +52,218 @@
 	font-style: normal;
 	font-display: swap;
 }
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
 body {
-	font-family: "Atkinson", sans-serif;
+	font-family: "Nunito", "Atkinson", sans-serif;
 	margin: 0;
 	padding: 0;
-	text-align: left;
-	background: linear-gradient(var(--gray-gradient)) no-repeat;
-	background-size: 100% 600px;
+	background-color: var(--white);
+	color: var(--text-dark);
+	font-size: 18px;
+	line-height: 1.75;
 	word-wrap: break-word;
 	overflow-wrap: break-word;
-	color: rgb(var(--gray-dark));
-	font-size: 20px;
-	line-height: 1.7;
 }
+
 main {
-	width: 720px;
-	max-width: calc(100% - 2em);
-	margin: auto;
-	padding: 3em 1em;
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 1.5em;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Playfair Display", "Atkinson", serif;
 	margin: 0 0 0.5rem 0;
-	color: rgb(var(--black));
 	line-height: 1.2;
+	color: var(--ocean-deep);
 }
-h1 {
-	font-size: 3.052em;
-}
-h2 {
-	font-size: 2.441em;
-}
-h3 {
-	font-size: 1.953em;
-}
-h4 {
-	font-size: 1.563em;
-}
-h5 {
-	font-size: 1.25em;
-}
-strong,
-b {
-	font-weight: 700;
-}
+h1 { font-size: clamp(2rem, 5vw, 3.5rem); }
+h2 { font-size: clamp(1.6rem, 3.5vw, 2.4rem); }
+h3 { font-size: clamp(1.2rem, 2.5vw, 1.8rem); }
+h4 { font-size: 1.25rem; }
+
+strong, b { font-weight: 800; }
+
 a {
-	color: var(--accent);
+	color: var(--ocean);
+	text-decoration: none;
+	transition: color 0.2s;
 }
-a:hover {
-	color: var(--accent);
-}
-p {
-	margin-bottom: 1em;
-}
-.prose p {
-	margin-bottom: 2em;
-}
-textarea {
-	width: 100%;
-	font-size: 16px;
-}
-input {
-	font-size: 16px;
-}
-table {
-	width: 100%;
-}
+a:hover { color: var(--sky); }
+
+p { margin-bottom: 1em; }
+
 img {
 	max-width: 100%;
 	height: auto;
-	border-radius: 8px;
-}
-code {
-	padding: 2px 5px;
-	background-color: rgb(var(--gray-light));
-	border-radius: 2px;
-}
-pre {
-	padding: 1.5em;
-	border-radius: 8px;
-}
-pre > code {
-	all: unset;
-}
-blockquote {
-	border-left: 4px solid var(--accent);
-	padding: 0 0 0 20px;
-	margin: 0px;
-	font-size: 1.333em;
-}
-hr {
-	border: none;
-	border-top: 1px solid rgb(var(--gray-light));
-}
-@media (max-width: 720px) {
-	body {
-		font-size: 18px;
-	}
-	main {
-		padding: 1em;
-	}
+	border-radius: var(--radius-sm);
 }
 
+/* ── Utility ────────────────────────────────────── */
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 1.5rem;
+}
+
+.section {
+	padding: 5rem 0;
+}
+
+.section-alt {
+	background: var(--off-white);
+}
+
+.text-center { text-align: center; }
+
+.btn {
+	display: inline-block;
+	padding: 0.75em 2em;
+	border-radius: 50px;
+	font-family: "Nunito", sans-serif;
+	font-weight: 800;
+	font-size: 1rem;
+	cursor: pointer;
+	transition: all 0.25s ease;
+	text-decoration: none;
+	border: none;
+}
+
+.btn-primary {
+	background: linear-gradient(135deg, var(--ocean-mid), var(--sky));
+	color: var(--white);
+	box-shadow: 0 4px 20px rgba(0,180,216,0.4);
+}
+.btn-primary:hover {
+	background: linear-gradient(135deg, var(--ocean), var(--ocean-mid));
+	color: var(--white);
+	transform: translateY(-2px);
+	box-shadow: 0 8px 30px rgba(0,119,182,0.45);
+}
+
+.btn-outline {
+	background: transparent;
+	color: var(--white);
+	border: 2px solid var(--white);
+}
+.btn-outline:hover {
+	background: var(--white);
+	color: var(--ocean);
+	transform: translateY(-2px);
+}
+
+/* ── Wave divider ───────────────────────────────── */
+.wave-divider {
+	display: block;
+	width: 100%;
+	overflow: hidden;
+	line-height: 0;
+}
+.wave-divider svg {
+	display: block;
+	width: 100%;
+}
+
+/* ── Cards ──────────────────────────────────────── */
+.card {
+	background: var(--white);
+	border-radius: var(--radius-md);
+	box-shadow: var(--shadow-md);
+	overflow: hidden;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+	transform: translateY(-6px);
+	box-shadow: var(--shadow-lg);
+}
+
+/* ── Badges ─────────────────────────────────────── */
+.badge {
+	display: inline-block;
+	padding: 0.3em 1em;
+	border-radius: 50px;
+	font-size: 0.8rem;
+	font-weight: 700;
+	background: var(--mist);
+	color: var(--ocean);
+}
+
+/* ── Section header ─────────────────────────────── */
+.section-label {
+	display: block;
+	text-align: center;
+	font-size: 0.85rem;
+	font-weight: 800;
+	text-transform: uppercase;
+	letter-spacing: 0.15em;
+	color: var(--sky);
+	margin-bottom: 0.5rem;
+}
+.section-title {
+	text-align: center;
+	margin-bottom: 0.75rem;
+}
+.section-subtitle {
+	text-align: center;
+	color: var(--text-mid);
+	max-width: 600px;
+	margin: 0 auto 3rem;
+}
+
+/* ── Forms ──────────────────────────────────────── */
+.form-group {
+	margin-bottom: 1.25rem;
+}
+label {
+	display: block;
+	font-weight: 700;
+	margin-bottom: 0.4rem;
+	color: var(--text-mid);
+	font-size: 0.95rem;
+}
+input, textarea, select {
+	width: 100%;
+	padding: 0.75em 1em;
+	border: 2px solid var(--mist);
+	border-radius: var(--radius-sm);
+	font-family: inherit;
+	font-size: 1rem;
+	color: var(--text-dark);
+	background: var(--white);
+	transition: border-color 0.2s;
+}
+input:focus, textarea:focus, select:focus {
+	outline: none;
+	border-color: var(--sky);
+	box-shadow: 0 0 0 3px rgba(0,180,216,0.15);
+}
+textarea { resize: vertical; min-height: 140px; }
+
+/* ── Misc ───────────────────────────────────────── */
+hr {
+	border: none;
+	border-top: 1px solid var(--mist);
+}
+
+code {
+	padding: 2px 6px;
+	background: var(--mist);
+	border-radius: 4px;
+	font-size: 0.9em;
+}
+
+/* ── Accessibility ──────────────────────────────── */
 .sr-only {
 	border: 0;
 	padding: 0;
@@ -144,12 +272,14 @@ hr {
 	height: 1px;
 	width: 1px;
 	overflow: hidden;
-	/* IE6, IE7 - a 0 height clip, off to the bottom right of the visible 1px box */
-	clip: rect(1px 1px 1px 1px);
-	/* maybe deprecated but we need to support legacy browsers */
 	clip: rect(1px, 1px, 1px, 1px);
-	/* modern browsers, clip-path works inwards from each corner */
 	clip-path: inset(50%);
-	/* added line to stop words getting smushed together (as they go onto separate lines and some screen readers do not understand line feeds as a space */
 	white-space: nowrap;
+}
+
+/* ── Responsive ─────────────────────────────────── */
+@media (max-width: 768px) {
+	body { font-size: 16px; }
+	.section { padding: 3rem 0; }
+	main { padding: 0 1rem; }
 }
