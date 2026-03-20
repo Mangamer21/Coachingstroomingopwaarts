@@ -6,45 +6,758 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="nl">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
 	<body>
 		<Header />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
-		</main>
+
+		<!-- ═══════════════════════════════════════
+		     HERO
+		     ═══════════════════════════════════════ -->
+		<section class="hero">
+			<div class="hero-bg">
+				<div class="bubble b1"></div>
+				<div class="bubble b2"></div>
+				<div class="bubble b3"></div>
+				<div class="bubble b4"></div>
+				<div class="bubble b5"></div>
+			</div>
+			<div class="hero-content container">
+				<div class="hero-text">
+					<span class="hero-badge">🏊 Professionele zwembegeleiding</span>
+					<h1>Leer zwemmen met <em>vertrouwen</em> & plezier</h1>
+					<p class="hero-lead">
+						Ik ben <strong>Gian Luca Bosmans</strong>, gediplomeerd zwemleerkracht. Of je nu
+						een kleuter bent die het water ontdekt, of een volwassene die zijn techniek wil
+						verfijnen – ik begeleid jou stap voor stap naar je doel.
+					</p>
+					<div class="hero-actions">
+						<a href="/contact" class="btn btn-primary">Gratis kennismakingsgesprek</a>
+						<a href="/diensten" class="btn btn-outline">Bekijk mijn diensten</a>
+					</div>
+					<div class="hero-stats">
+						<div class="stat">
+							<span class="stat-number">10+</span>
+							<span class="stat-label">Jaar ervaring</span>
+						</div>
+						<div class="stat">
+							<span class="stat-number">500+</span>
+							<span class="stat-label">Tevreden leerlingen</span>
+						</div>
+						<div class="stat">
+							<span class="stat-number">100%</span>
+							<span class="stat-label">Persoonlijke aanpak</span>
+						</div>
+					</div>
+				</div>
+				<div class="hero-visual">
+					<div class="hero-logo-wrap">
+						<img
+							src="https://github.com/user-attachments/assets/22ef011f-75f5-472e-b58f-6f6fb45bf7a6"
+							alt="Coaching Stroomingopwaarts"
+							class="hero-logo"
+							width="320"
+							height="320"
+						/>
+						<div class="logo-ring r1"></div>
+						<div class="logo-ring r2"></div>
+					</div>
+				</div>
+			</div>
+			<div class="hero-wave">
+				<svg viewBox="0 0 1440 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M0,50 C360,100 1080,0 1440,50 L1440,100 L0,100 Z" fill="white"/>
+				</svg>
+			</div>
+		</section>
+
+		<!-- ═══════════════════════════════════════
+		     WHY ME – TRUST STRIP
+		     ═══════════════════════════════════════ -->
+		<section class="trust-strip">
+			<div class="container">
+				<div class="trust-grid">
+					<div class="trust-item">
+						<div class="trust-icon">🎓</div>
+						<div>
+							<strong>Gediplomeerd</strong>
+							<span>Erkende opleiding</span>
+						</div>
+					</div>
+					<div class="trust-item">
+						<div class="trust-icon">👶</div>
+						<div>
+							<strong>Alle leeftijden</strong>
+							<span>Kleuters t/m senioren</span>
+						</div>
+					</div>
+					<div class="trust-item">
+						<div class="trust-icon">🎯</div>
+						<div>
+							<strong>Persoonlijk plan</strong>
+							<span>Op jouw tempo</span>
+						</div>
+					</div>
+					<div class="trust-item">
+						<div class="trust-icon">💙</div>
+						<div>
+							<strong>Veilig & plezierig</strong>
+							<span>Positieve omgeving</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ═══════════════════════════════════════
+		     IN ACTION PHOTO BANNER
+		     ═══════════════════════════════════════ -->
+		<section class="action-banner">
+			<div class="action-inner">
+				<img
+					src="https://github.com/user-attachments/assets/c782b509-f740-418e-af3e-e7696bd38156"
+					alt="Gian Luca Bosmans geeft zwemles"
+					class="action-photo"
+					loading="lazy"
+				/>
+				<div class="action-overlay">
+					<div class="action-quote">
+						<p>"Elk kind dat het water overwint, is een overwinning voor mij."</p>
+						<span>— Gian Luca Bosmans</span>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ═══════════════════════════════════════
+		     SERVICES
+		     ═══════════════════════════════════════ -->
+		<section class="section section-alt" id="diensten">
+			<div class="container">
+				<span class="section-label">Wat ik aanbied</span>
+				<h2 class="section-title">Mijn zwemopleidingen</h2>
+				<p class="section-subtitle">Van eerste plonsjes tot gevorderde zwemslagen – voor iedereen is er een passend programma.</p>
+
+				<div class="services-grid">
+					<div class="service-card card">
+						<div class="service-icon-wrap" style="background: linear-gradient(135deg,#caf0f8,#90e0ef)">
+							<span>👧</span>
+						</div>
+						<div class="service-body">
+							<h3>Zwemles kinderen</h3>
+							<p>Spelenderwijs het water leren kennen. Veilig, stap voor stap en met veel plezier. Vanaf 4 jaar.</p>
+							<a href="/diensten#zwemles-kinderen" class="service-link">Meer info →</a>
+						</div>
+					</div>
+
+					<div class="service-card card">
+						<div class="service-icon-wrap" style="background: linear-gradient(135deg,#90e0ef,#48cae4)">
+							<span>🧑</span>
+						</div>
+						<div class="service-body">
+							<h3>Zwemles volwassenen</h3>
+							<p>Nooit te laat om te leren zwemmen. Discreet, efficiënt en volledig op jouw tempo.</p>
+							<a href="/diensten#zwemles-volwassenen" class="service-link">Meer info →</a>
+						</div>
+					</div>
+
+					<div class="service-card card">
+						<div class="service-icon-wrap" style="background: linear-gradient(135deg,#48cae4,#00b4d8)">
+							<span>🏆</span>
+						</div>
+						<div class="service-body">
+							<h3>Techniektraining</h3>
+							<p>Wil je sneller en efficiënter zwemmen? Ik verfijn je slagen, draaien en push-offs.</p>
+							<a href="/diensten#techniek" class="service-link">Meer info →</a>
+						</div>
+					</div>
+
+					<div class="service-card card">
+						<div class="service-icon-wrap" style="background: linear-gradient(135deg,#00b4d8,#0096c7)">
+							<span>👥</span>
+						</div>
+						<div class="service-body">
+							<h3>Groepslessen</h3>
+							<p>Samen zwemmen is leuker! Kleine groepen voor kinderen of volwassenen met gelijke niveaus.</p>
+							<a href="/diensten#groepsles" class="service-link">Meer info →</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="text-center" style="margin-top:2.5rem">
+					<a href="/diensten" class="btn btn-primary">Alle diensten bekijken</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- ═══════════════════════════════════════
+		     ABOUT TEASER
+		     ═══════════════════════════════════════ -->
+		<section class="section about-section">
+			<div class="container">
+				<div class="about-grid">
+					<div class="about-visual">
+						<div class="about-img-wrap">
+							<img
+								src="https://github.com/user-attachments/assets/4ba373bb-5657-40d9-b14f-46fdb44f188d"
+								alt="Gian Luca Bosmans – zwemleerkracht"
+								class="about-photo"
+								width="320"
+								height="380"
+							/>
+							<div class="about-badge-float">
+								<span>10+ jaar<br/>ervaring</span>
+							</div>
+						</div>
+					</div>
+					<div class="about-text">
+						<span class="section-label" style="text-align:left">Wie ben ik?</span>
+						<h2>Hallo, ik ben<br/><strong>Gian Luca Bosmans</strong></h2>
+						<p>
+							Zwemmen is mijn passie. Al meer dan tien jaar help ik kinderen en volwassenen
+							om zich veilig en met plezier in het water te bewegen. Mijn aanpak is geduldig,
+							positief en volledig afgestemd op jouw behoeften.
+						</p>
+						<p>
+							"Stroomingopwaarts" is mijn motto: samen gaan we altijd vooruit, hoe langzaam
+							of hoe snel ook. Elk klein doelwit dat we samen bereiken, viert ik met jou mee.
+						</p>
+						<ul class="about-highlights">
+							<li>
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+								Gediplomeerd zwemleerkracht
+							</li>
+							<li>
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+								EHBO en reanimatie gecertificeerd
+							</li>
+							<li>
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+								Ervaring met angst voor water
+							</li>
+							<li>
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+								Lesgeeft in Nederlands & Frans
+							</li>
+						</ul>
+						<a href="/over-mij" class="btn btn-primary">Lees meer over mij</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ═══════════════════════════════════════
+		     TESTIMONIALS
+		     ═══════════════════════════════════════ -->
+		<section class="section section-alt" id="ervaringen">
+			<div class="container">
+				<span class="section-label">Ervaringen</span>
+				<h2 class="section-title">Wat zeggen mijn leerlingen?</h2>
+				<p class="section-subtitle">Elke leerling is uniek – dit zijn hun verhalen.</p>
+				<div class="testimonials-grid">
+					<div class="testimonial">
+						<div class="stars">★★★★★</div>
+						<p>"Mijn dochter was doodsbang voor het water. Na 3 maanden bij Gian Luca zwemt ze als een vis! Zijn geduld en enthousiasme zijn ongelooflijk."</p>
+						<div class="testimonial-author">
+							<div class="author-avatar">S</div>
+							<div>
+								<strong>Sofie V.</strong>
+								<span>Mama van Emma (6 jaar)</span>
+							</div>
+						</div>
+					</div>
+					<div class="testimonial">
+						<div class="stars">★★★★★</div>
+						<p>"Als volwassene durfde ik al jaren niet te zwemmen. Gian Luca heeft mij stap voor stap geholpen. Na 2 maanden zwem ik zelfstandig 25m!"</p>
+						<div class="testimonial-author">
+							<div class="author-avatar">M</div>
+							<div>
+								<strong>Mohamed A.</strong>
+								<span>Volwassene leerling</span>
+							</div>
+						</div>
+					</div>
+					<div class="testimonial">
+						<div class="stars">★★★★★</div>
+						<p>"Professioneel, vriendelijk en altijd positief. Mijn zonen gaan altijd met plezier naar de zwemles. Warm aanbevolen!"</p>
+						<div class="testimonial-author">
+							<div class="author-avatar">L</div>
+							<div>
+								<strong>Laura D.</strong>
+								<span>Mama van Tim & Lander</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ═══════════════════════════════════════
+		     CTA BANNER
+		     ═══════════════════════════════════════ -->
+		<section class="cta-banner">
+			<div class="container">
+				<div class="cta-inner">
+					<div class="cta-text">
+						<h2>Klaar om te beginnen?</h2>
+						<p>Plan vandaag nog een gratis kennismakingsgesprek en ontdek welk programma het beste bij jou past.</p>
+					</div>
+					<div class="cta-actions">
+						<a href="/contact" class="btn btn-primary">Neem contact op</a>
+						<a href="tel:+32000000000" class="btn btn-outline">
+							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.3h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8a16 16 0 0 0 5.95 5.95l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.02z"/></svg>
+							Bel mij
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
 		<Footer />
 	</body>
 </html>
+
+<style>
+	/* ── Hero ─────────────────────────────────────── */
+	.hero {
+		position: relative;
+		background: linear-gradient(160deg, var(--ocean-deep) 0%, var(--ocean) 55%, var(--sky) 100%);
+		color: var(--white);
+		overflow: hidden;
+		padding: 5rem 0 0;
+	}
+	.hero-bg {
+		position: absolute;
+		inset: 0;
+		pointer-events: none;
+		overflow: hidden;
+	}
+	.bubble {
+		position: absolute;
+		border-radius: 50%;
+		background: rgba(255,255,255,0.06);
+		animation: float 8s ease-in-out infinite;
+	}
+	.b1 { width:300px; height:300px; top:-80px; left:-60px; animation-delay:0s; }
+	.b2 { width:200px; height:200px; top:40%; right:-50px; animation-delay:2s; }
+	.b3 { width:150px; height:150px; bottom:20%; left:15%; animation-delay:4s; }
+	.b4 { width:80px;  height:80px;  top:25%; left:40%; animation-delay:1s; }
+	.b5 { width:120px; height:120px; bottom:15%; right:20%; animation-delay:3s; }
+	@keyframes float {
+		0%, 100% { transform: translateY(0) scale(1); }
+		50%       { transform: translateY(-20px) scale(1.05); }
+	}
+
+	.hero-content {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 3rem;
+		align-items: center;
+		padding-bottom: 5rem;
+		position: relative;
+		z-index: 1;
+	}
+	.hero-badge {
+		display: inline-block;
+		padding: 0.4em 1.2em;
+		background: rgba(255,255,255,0.15);
+		backdrop-filter: blur(8px);
+		border: 1px solid rgba(255,255,255,0.25);
+		border-radius: 50px;
+		font-size: 0.9rem;
+		font-weight: 700;
+		margin-bottom: 1.25rem;
+		color: var(--white);
+	}
+	.hero h1 {
+		color: var(--white);
+		margin-bottom: 1rem;
+		font-size: clamp(2rem, 4.5vw, 3.2rem);
+	}
+	.hero h1 em {
+		font-style: normal;
+		color: var(--aqua);
+	}
+	.hero-lead {
+		font-size: 1.1rem;
+		opacity: 0.92;
+		margin-bottom: 2rem;
+		max-width: 520px;
+	}
+	.hero-actions {
+		display: flex;
+		gap: 1rem;
+		flex-wrap: wrap;
+		margin-bottom: 2.5rem;
+	}
+	.hero-stats {
+		display: flex;
+		gap: 2rem;
+		flex-wrap: wrap;
+	}
+	.stat {
+		display: flex;
+		flex-direction: column;
+	}
+	.stat-number {
+		font-size: 2rem;
+		font-weight: 900;
+		color: var(--white);
+		line-height: 1;
+	}
+	.stat-label {
+		font-size: 0.8rem;
+		opacity: 0.75;
+		margin-top: 0.2rem;
+	}
+
+	/* Hero visual / logo */
+	.hero-visual {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.hero-logo-wrap {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.hero-logo {
+		width: clamp(200px, 30vw, 320px);
+		height: clamp(200px, 30vw, 320px);
+		object-fit: contain;
+		border-radius: 50%;
+		border: 4px solid rgba(255,255,255,0.25);
+		background: rgba(255,255,255,0.1);
+		backdrop-filter: blur(4px);
+		position: relative;
+		z-index: 1;
+	}
+	.logo-ring {
+		position: absolute;
+		border-radius: 50%;
+		border: 2px solid rgba(255,255,255,0.15);
+		animation: pulse-ring 3s ease-out infinite;
+	}
+	.r1 { width: 110%; height: 110%; animation-delay: 0s; }
+	.r2 { width: 130%; height: 130%; animation-delay: 1.2s; }
+	@keyframes pulse-ring {
+		0%   { transform: scale(0.9); opacity: 0.5; }
+		100% { transform: scale(1.1); opacity: 0; }
+	}
+
+	.hero-wave {
+		line-height: 0;
+		overflow: hidden;
+	}
+	.hero-wave svg {
+		display: block;
+		width: 100%;
+	}
+
+	/* ── Action photo banner ─────────────────────── */
+	.action-banner {
+		position: relative;
+		overflow: hidden;
+		max-height: 480px;
+	}
+	.action-inner {
+		position: relative;
+	}
+	.action-photo {
+		width: 100%;
+		height: 480px;
+		object-fit: cover;
+		object-position: center 30%;
+		display: block;
+		border-radius: 0;
+	}
+	.action-overlay {
+		position: absolute;
+		inset: 0;
+		background: linear-gradient(to right, rgba(3,4,94,0.75) 0%, rgba(0,119,182,0.4) 60%, transparent 100%);
+		display: flex;
+		align-items: flex-end;
+		padding: 3rem;
+	}
+	.action-quote {
+		max-width: 480px;
+	}
+	.action-quote p {
+		font-family: "Playfair Display", serif;
+		font-size: clamp(1.2rem, 2.5vw, 1.7rem);
+		color: var(--white);
+		font-style: italic;
+		margin: 0 0 0.5rem;
+		line-height: 1.4;
+	}
+	.action-quote span {
+		font-size: 0.95rem;
+		color: var(--aqua);
+		font-weight: 700;
+	}
+
+	/* ── Trust strip ─────────────────────────────── */
+	.trust-strip {
+		background: var(--white);
+		padding: 2.5rem 0;
+		border-bottom: 1px solid var(--mist);
+	}
+	.trust-grid {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 1.5rem;
+	}
+	.trust-item {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+	}
+	.trust-icon {
+		font-size: 2rem;
+		flex-shrink: 0;
+	}
+	.trust-item strong {
+		display: block;
+		font-size: 1rem;
+		color: var(--ocean-deep);
+	}
+	.trust-item span {
+		font-size: 0.85rem;
+		color: var(--text-light);
+	}
+
+	/* ── Services ────────────────────────────────── */
+	.services-grid {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 1.5rem;
+	}
+	.service-card {
+		display: flex;
+		flex-direction: column;
+	}
+	.service-icon-wrap {
+		padding: 2rem;
+		text-align: center;
+		font-size: 2.5rem;
+	}
+	.service-body {
+		padding: 1.5rem;
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+	}
+	.service-body h3 {
+		font-size: 1.15rem;
+		margin-bottom: 0.5rem;
+	}
+	.service-body p {
+		color: var(--text-mid);
+		font-size: 0.95rem;
+		flex: 1;
+		margin-bottom: 1rem;
+	}
+	.service-link {
+		font-weight: 800;
+		font-size: 0.9rem;
+		color: var(--ocean);
+		text-decoration: none;
+	}
+	.service-link:hover { color: var(--sky); }
+
+	/* ── About section ───────────────────────────── */
+	.about-grid {
+		display: grid;
+		grid-template-columns: 1fr 1.4fr;
+		gap: 4rem;
+		align-items: center;
+	}
+	.about-img-wrap {
+		position: relative;
+		display: inline-block;
+	}
+	.about-img-placeholder {
+		width: 320px;
+		height: 380px;
+		border-radius: var(--radius-lg);
+		background: linear-gradient(160deg, var(--ocean), var(--sky));
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 5rem;
+		font-weight: 900;
+		color: rgba(255,255,255,0.4);
+		box-shadow: var(--shadow-lg);
+	}
+	.about-photo {
+		width: 320px;
+		height: 380px;
+		object-fit: cover;
+		border-radius: var(--radius-lg);
+		box-shadow: var(--shadow-lg);
+		display: block;
+	}
+	.about-badge-float {
+		position: absolute;
+		bottom: -1rem;
+		right: -1.5rem;
+		background: var(--white);
+		border-radius: var(--radius-md);
+		padding: 0.75rem 1.25rem;
+		box-shadow: var(--shadow-md);
+		text-align: center;
+		font-size: 0.85rem;
+		font-weight: 800;
+		line-height: 1.3;
+		color: var(--ocean-deep);
+	}
+	.about-text h2 {
+		font-size: clamp(1.8rem, 3vw, 2.5rem);
+		margin-bottom: 1rem;
+	}
+	.about-text h2 strong {
+		color: var(--ocean);
+	}
+	.about-highlights {
+		list-style: none;
+		padding: 0;
+		margin: 1.5rem 0 2rem;
+		display: flex;
+		flex-direction: column;
+		gap: 0.6rem;
+	}
+	.about-highlights li {
+		display: flex;
+		align-items: center;
+		gap: 0.6rem;
+		font-weight: 600;
+		color: var(--text-mid);
+	}
+	.about-highlights svg {
+		width: 18px;
+		height: 18px;
+		flex-shrink: 0;
+		color: var(--ocean);
+	}
+
+	/* ── Testimonials ────────────────────────────── */
+	.testimonials-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1.5rem;
+	}
+	.testimonial {
+		background: var(--white);
+		border-radius: var(--radius-md);
+		padding: 2rem;
+		box-shadow: var(--shadow-sm);
+		border: 1px solid var(--mist);
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
+	.stars {
+		color: var(--gold);
+		font-size: 1.1rem;
+		letter-spacing: 0.1em;
+	}
+	.testimonial p {
+		color: var(--text-mid);
+		font-style: italic;
+		margin: 0;
+		font-size: 0.95rem;
+		flex: 1;
+	}
+	.testimonial-author {
+		display: flex;
+		align-items: center;
+		gap: 0.8rem;
+	}
+	.author-avatar {
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+		background: linear-gradient(135deg, var(--ocean-mid), var(--sky));
+		color: white;
+		font-weight: 800;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 1rem;
+		flex-shrink: 0;
+	}
+	.testimonial-author strong {
+		display: block;
+		font-size: 0.9rem;
+		color: var(--ocean-deep);
+	}
+	.testimonial-author span {
+		font-size: 0.8rem;
+		color: var(--text-light);
+	}
+
+	/* ── CTA Banner ──────────────────────────────── */
+	.cta-banner {
+		background: linear-gradient(135deg, var(--ocean-deep) 0%, var(--ocean) 100%);
+		padding: 4rem 0;
+	}
+	.cta-inner {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 2rem;
+		flex-wrap: wrap;
+	}
+	.cta-text h2 {
+		color: var(--white);
+		margin-bottom: 0.5rem;
+	}
+	.cta-text p {
+		color: rgba(255,255,255,0.8);
+		margin: 0;
+		max-width: 480px;
+	}
+	.cta-actions {
+		display: flex;
+		gap: 1rem;
+		flex-wrap: wrap;
+		align-items: center;
+	}
+	.cta-actions .btn-outline {
+		display: flex;
+		align-items: center;
+		gap: 0.4rem;
+	}
+
+	/* ── Responsive ──────────────────────────────── */
+	@media (max-width: 1024px) {
+		.services-grid { grid-template-columns: repeat(2, 1fr); }
+		.testimonials-grid { grid-template-columns: repeat(2, 1fr); }
+		.trust-grid { grid-template-columns: repeat(2, 1fr); }
+	}
+	@media (max-width: 768px) {
+		.hero-content {
+			grid-template-columns: 1fr;
+			text-align: center;
+			padding-bottom: 4rem;
+		}
+		.hero-visual { order: -1; }
+		.hero-lead { margin: 0 auto 2rem; }
+		.hero-actions { justify-content: center; }
+		.hero-stats { justify-content: center; }
+		.about-grid { grid-template-columns: 1fr; }
+		.about-visual { display: none; }
+		.services-grid { grid-template-columns: 1fr; }
+		.testimonials-grid { grid-template-columns: 1fr; }
+		.trust-grid { grid-template-columns: 1fr 1fr; }
+		.cta-inner { flex-direction: column; text-align: center; }
+		.cta-actions { justify-content: center; }
+	}
+	@media (max-width: 480px) {
+		.trust-grid { grid-template-columns: 1fr; }
+	}
+</style>

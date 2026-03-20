@@ -1,0 +1,466 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<!doctype html>
+<html lang="nl">
+	<head>
+		<BaseHead
+			title="Diensten – Coaching Stroomingopwaarts"
+			description="Ontdek alle zwemdiensten van Gian Luca Bosmans: zwemles voor kinderen, volwassenen, bijles, techniektraining en groepslessen."
+		/>
+	</head>
+	<body>
+		<Header />
+
+		<!-- Page header -->
+		<section class="page-header">
+			<div class="container">
+				<span class="section-label">Aanbod</span>
+				<h1>Mijn diensten</h1>
+				<p>Voor elk niveau en elke leeftijd – persoonlijk, veilig en plezierig.</p>
+			</div>
+			<div class="wave-bottom">
+				<svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M0,30 C480,60 960,0 1440,30 L1440,60 L0,60 Z" fill="white"/>
+				</svg>
+			</div>
+		</section>
+
+		<!-- Teaching photo strip -->
+		<div class="teaching-strip">
+			<img
+				src="https://github.com/user-attachments/assets/c782b509-f740-418e-af3e-e7696bd38156"
+				alt="Gian Luca Bosmans geeft zwemles"
+				class="strip-photo"
+				loading="lazy"
+			/>
+			<div class="strip-overlay">
+				<div class="strip-stats container">
+					<div class="strip-stat">
+						<strong>10+</strong>
+						<span>Jaar ervaring</span>
+					</div>
+					<div class="strip-stat">
+						<strong>500+</strong>
+						<span>Leerlingen</span>
+					</div>
+					<div class="strip-stat">
+						<strong>4</strong>
+						<span>Programma's</span>
+					</div>
+					<div class="strip-stat">
+						<strong>100%</strong>
+						<span>Op maat</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<main>
+			<!-- Zwemles kinderen -->
+			<section class="service-detail section" id="zwemles-kinderen">
+				<div class="container">
+					<div class="detail-grid">
+						<div class="detail-icon-col">
+							<div class="big-icon" style="background:linear-gradient(135deg,#caf0f8,#90e0ef)">👧</div>
+						</div>
+						<div class="detail-content">
+							<span class="section-label" style="text-align:left">Voor kinderen</span>
+							<h2>Zwemles voor kinderen</h2>
+							<p>
+								Leer jouw kind veilig en zelfverzekerd zwemmen in een warme, speelse omgeving.
+								Van de eerste plons tot het behalen van zwemdiploma's, ik begeleid elk kind
+								op zijn of haar eigen tempo.
+							</p>
+							<p>
+								Door gebruik te maken van spelletjes, oefeningen en positieve bekrachtiging
+								bouw ik het watervertrouwen stap voor stap op.
+							</p>
+							<div class="detail-info">
+								<div class="info-item">
+									<strong>Leeftijd</strong>
+									<span>Vanaf 4 jaar</span>
+								</div>
+								<div class="info-item">
+									<strong>Grootte</strong>
+									<span>Max. 4 kinderen per les</span>
+								</div>
+								<div class="info-item">
+									<strong>Duur</strong>
+									<span>30–45 min per les</span>
+								</div>
+								<div class="info-item">
+									<strong>Frequentie</strong>
+									<span>1–2× per week</span>
+								</div>
+							</div>
+							<a href="/contact" class="btn btn-primary">Aanmelden</a>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<hr class="section-divider" />
+
+			<!-- Zwemles volwassenen -->
+			<section class="service-detail section" id="zwemles-volwassenen">
+				<div class="container">
+					<div class="detail-grid reverse">
+						<div class="detail-content">
+							<span class="section-label" style="text-align:left">Voor volwassenen</span>
+							<h2>Zwemles voor volwassenen</h2>
+							<p>
+								Nooit te laat om te leren zwemmen! Of je nu angstig bent voor water, nooit
+								de kans hebt gehad om te leren, of gewoon beter wil worden – ik help je
+								verder in een veilige, niet-oordelende omgeving.
+							</p>
+							<p>
+								Onze lessen zijn discreet en volledig op maat. Jij bepaalt het tempo.
+							</p>
+							<div class="detail-info">
+								<div class="info-item">
+									<strong>Leeftijd</strong>
+									<span>Volwassenen & tieners</span>
+								</div>
+								<div class="info-item">
+									<strong>Niveau</strong>
+									<span>Beginner t/m gevorderd</span>
+								</div>
+								<div class="info-item">
+									<strong>Duur</strong>
+									<span>45–60 min per les</span>
+								</div>
+								<div class="info-item">
+									<strong>Flexibiliteit</strong>
+									<span>Avond & weekend beschikbaar</span>
+								</div>
+							</div>
+							<a href="/contact" class="btn btn-primary">Aanmelden</a>
+						</div>
+						<div class="detail-icon-col">
+							<div class="big-icon" style="background:linear-gradient(135deg,#90e0ef,#48cae4)">🧑</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<hr class="section-divider" />
+
+			<!-- Techniektraining -->
+			<section class="service-detail section" id="techniek">
+				<div class="container">
+					<div class="detail-grid">
+						<div class="detail-icon-col">
+							<div class="big-icon" style="background:linear-gradient(135deg,#48cae4,#00b4d8)">🏆</div>
+						</div>
+						<div class="detail-content">
+							<span class="section-label" style="text-align:left">Voor sportievelingen</span>
+							<h2>Techniektraining</h2>
+							<p>
+								Al goed zwemmen maar wil je je slagen, draaien en push-offs verbeteren?
+								In mijn techniektraining analyseer ik jouw zwemslagen en werk ik gericht
+								aan je zwakke punten.
+							</p>
+							<p>
+								Geschikt voor zwemmers die willen deelnemen aan wedstrijden of gewoon
+								efficiënter door het water willen bewegen.
+							</p>
+							<div class="detail-info">
+								<div class="info-item">
+									<strong>Niveau</strong>
+									<span>Gevorderd</span>
+								</div>
+								<div class="info-item">
+									<strong>Slagen</strong>
+									<span>Vrije slag, schoolslag, rugslag, vlinderslag</span>
+								</div>
+								<div class="info-item">
+									<strong>Duur</strong>
+									<span>60 min per les</span>
+								</div>
+							</div>
+							<a href="/contact" class="btn btn-primary">Aanmelden</a>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<hr class="section-divider" />
+
+			<!-- Groepsles -->
+			<section class="service-detail section" id="groepsles">
+				<div class="container">
+					<div class="detail-grid reverse">
+						<div class="detail-content">
+							<span class="section-label" style="text-align:left">In groep</span>
+							<h2>Groepslessen</h2>
+							<p>
+								Samen zwemmen is leuker! In kleine groepen (max. 6 personen) leer je samen
+								met leeftijds- of niveaugenoten. Groepslessen zijn ook een geweldige manier
+								om sociale vaardigheden te ontwikkelen.
+							</p>
+							<p>
+								Ik organiseer regelmatig nieuwe groepen. Schrijf je in voor de wachtlijst.
+							</p>
+							<div class="detail-info">
+								<div class="info-item">
+									<strong>Groepsgrootte</strong>
+									<span>Max. 6 personen</span>
+								</div>
+								<div class="info-item">
+									<strong>Leeftijd</strong>
+									<span>Kinderen & volwassenen (apart)</span>
+								</div>
+								<div class="info-item">
+									<strong>Duur</strong>
+									<span>45 min per les</span>
+								</div>
+							</div>
+							<a href="/contact" class="btn btn-primary">Wachtlijst</a>
+						</div>
+						<div class="detail-icon-col">
+							<div class="big-icon" style="background:linear-gradient(135deg,#00b4d8,#0096c7)">👥</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Pricing CTA -->
+			<section class="pricing-cta section section-alt">
+				<div class="container text-center">
+					<span class="section-label">Tarieven</span>
+					<h2 class="section-title">Transparante prijzen</h2>
+					<p class="section-subtitle">Neem contact op voor een persoonlijk offerte. Het eerste gesprek is altijd gratis en vrijblijvend.</p>
+					<div class="pricing-cards">
+						<div class="pricing-card card">
+							<div class="pricing-top">
+								<h3>Privéles</h3>
+								<div class="price">Op aanvraag</div>
+							</div>
+							<ul class="pricing-features">
+								<li>✓ Persoonlijke begeleiding</li>
+								<li>✓ Jouw tempo</li>
+								<li>✓ Flexibele planning</li>
+								<li>✓ Kinderen & volwassenen</li>
+							</ul>
+							<a href="/contact" class="btn btn-primary">Contacteer mij</a>
+						</div>
+						<div class="pricing-card card featured">
+							<div class="pricing-badge">Populair</div>
+							<div class="pricing-top">
+								<h3>Groepsles</h3>
+								<div class="price">Op aanvraag</div>
+							</div>
+							<ul class="pricing-features">
+								<li>✓ Max. 6 personen</li>
+								<li>✓ Sociale omgeving</li>
+								<li>✓ Kostefficiënt</li>
+								<li>✓ Vaste lesdag per week</li>
+							</ul>
+							<a href="/contact" class="btn btn-primary">Inschrijven</a>
+						</div>
+						<div class="pricing-card card">
+							<div class="pricing-top">
+								<h3>Techniektraining</h3>
+								<div class="price">Op aanvraag</div>
+							</div>
+							<ul class="pricing-features">
+								<li>✓ Video-analyse</li>
+								<li>✓ Gerichte feedback</li>
+								<li>✓ Alle zwemslagen</li>
+								<li>✓ Competitiegerichte training</li>
+							</ul>
+							<a href="/contact" class="btn btn-primary">Meer info</a>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<Footer />
+	</body>
+</html>
+
+<style>
+	/* Teaching strip */
+	.teaching-strip {
+		position: relative;
+		height: 320px;
+		overflow: hidden;
+	}
+	.strip-photo {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center 40%;
+		border-radius: 0;
+		display: block;
+	}
+	.strip-overlay {
+		position: absolute;
+		inset: 0;
+		background: linear-gradient(to top, rgba(3,4,94,0.82) 0%, rgba(0,119,182,0.4) 60%, transparent 100%);
+		display: flex;
+		align-items: flex-end;
+		padding-bottom: 2.5rem;
+	}
+	.strip-stats {
+		display: flex;
+		gap: 3rem;
+		flex-wrap: wrap;
+	}
+	.strip-stat {
+		text-align: center;
+		color: var(--white);
+	}
+	.strip-stat strong {
+		display: block;
+		font-size: 2.2rem;
+		font-weight: 900;
+		line-height: 1;
+		color: var(--white);
+	}
+	.strip-stat span {
+		font-size: 0.85rem;
+		opacity: 0.8;
+		margin-top: 0.2rem;
+	}
+
+	/* Page header */
+	.page-header {
+		background: linear-gradient(160deg, var(--ocean-deep), var(--ocean));
+		color: var(--white);
+		padding: 4rem 0 0;
+		position: relative;
+		text-align: center;
+	}
+	.page-header .section-label { color: var(--aqua); }
+	.page-header h1 { color: var(--white); margin-bottom: 0.5rem; }
+	.page-header p { color: rgba(255,255,255,0.8); margin: 0 0 3rem; }
+	.wave-bottom { line-height: 0; overflow: hidden; }
+	.wave-bottom svg { display: block; width: 100%; }
+
+	/* Service details */
+	.detail-grid {
+		display: grid;
+		grid-template-columns: auto 1fr;
+		gap: 3rem;
+		align-items: center;
+	}
+	.detail-grid.reverse {
+		grid-template-columns: 1fr auto;
+	}
+	.detail-icon-col {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.big-icon {
+		width: 180px;
+		height: 180px;
+		border-radius: var(--radius-lg);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 5rem;
+		flex-shrink: 0;
+		box-shadow: var(--shadow-md);
+	}
+	.detail-content h2 { margin-bottom: 1rem; }
+	.detail-content p { color: var(--text-mid); }
+
+	.detail-info {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1rem;
+		background: var(--off-white);
+		border-radius: var(--radius-md);
+		padding: 1.5rem;
+		margin: 1.5rem 0;
+	}
+	.info-item {
+		display: flex;
+		flex-direction: column;
+		gap: 0.2rem;
+	}
+	.info-item strong {
+		font-size: 0.8rem;
+		text-transform: uppercase;
+		letter-spacing: 0.08em;
+		color: var(--text-light);
+	}
+	.info-item span {
+		font-weight: 700;
+		color: var(--ocean-deep);
+	}
+
+	.section-divider {
+		max-width: 800px;
+		margin: 0 auto;
+	}
+
+	/* Pricing */
+	.pricing-cards {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1.5rem;
+		margin-top: 1.5rem;
+	}
+	.pricing-card {
+		padding: 2rem;
+		text-align: center;
+		position: relative;
+	}
+	.pricing-card.featured {
+		border: 2px solid var(--sky);
+		transform: scale(1.03);
+	}
+	.pricing-badge {
+		position: absolute;
+		top: -0.75rem;
+		left: 50%;
+		transform: translateX(-50%);
+		background: linear-gradient(135deg, var(--ocean-mid), var(--sky));
+		color: white;
+		padding: 0.25em 1.2em;
+		border-radius: 50px;
+		font-size: 0.8rem;
+		font-weight: 800;
+	}
+	.pricing-top h3 { margin-bottom: 0.5rem; }
+	.price {
+		font-size: 1.5rem;
+		font-weight: 900;
+		color: var(--ocean);
+		margin-bottom: 1.5rem;
+	}
+	.pricing-features {
+		list-style: none;
+		padding: 0;
+		margin: 0 0 2rem;
+		text-align: left;
+		display: flex;
+		flex-direction: column;
+		gap: 0.6rem;
+		font-size: 0.95rem;
+		color: var(--text-mid);
+	}
+
+	@media (max-width: 900px) {
+		.pricing-cards { grid-template-columns: 1fr; }
+		.pricing-card.featured { transform: none; }
+	}
+	@media (max-width: 768px) {
+		.detail-grid,
+		.detail-grid.reverse {
+			grid-template-columns: 1fr;
+		}
+		.detail-grid.reverse .detail-content { order: 1; }
+		.detail-grid.reverse .detail-icon-col { order: 2; }
+		.big-icon { width: 120px; height: 120px; font-size: 3.5rem; }
+		.detail-info { grid-template-columns: 1fr; }
+	}
+</style>
